@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Google sans';
+  src: local('Google sans'), url(./assets/fonts/GoogleSans-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Google sans';
+  src: url(./assets/fonts/GoogleSans-Italic.ttf);
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Google sans';
+  src: url(./assets/fonts/GoogleSans-MediumItalic.ttf);
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Google sans';
+  src: url(./assets/fonts/GoogleSans-Bold.ttf);
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+// html,
+// body {
+//   height: 100%;
+// }
+body {
+  font-weight: 400;
+  font-family: 'Google sans', 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto,
+    'Open Sans', FreeSans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  // background: #00d2ff; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to bottom,
+  //   #928dab,
+  //   #00d2ff
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to bottom,
+  //   #928dab,
+  //   #00d2ff
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  ::selection {
+    color: white;
+    background-color: rgb(34, 32, 36);
+  }
+}
+
+// .nav-tabs .nav-link:hover {
+//   background-color: #ffffff !important;
+// }
+// .nav-tabs .nav-link:hover a {
+//   text-decoration: none;
+// }
+.nav-item.tab-style {
+  // margin-right: 0.25em;
+  // a span {
+  //   color: rgb(255, 255, 255);
+  // }
+  border: 2px solid #e91e63;
+  border-radius: 0.4rem;
+  // background-color: #18bc9c;
+  // border-color: #18bc9c;
+  // .active {
+  //   border-color: #18bc9c;
+  //   color: #18bc9c;
+  //   background-color: #fff;
+  // }
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #e91e63;
+}
+.navbar.navbar-2 .navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+.navbar.navbar-dark .navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+  cursor: pointer;
+}
+.form-control {
+  border-top-left-radius: 5em !important;
+  border-bottom-left-radius: 5em !important;
+}

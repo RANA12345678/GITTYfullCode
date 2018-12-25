@@ -1,0 +1,78 @@
+<header>
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-md navbar-dark mdb-color scrolling-navbar  ie-nav" [containerInside]="false">
+    <logo>
+      <a class="logo navbar-brand" routerLink="/">
+        <img src="../assets/icon.svg" alt="Gitty">
+      </a>
+    </logo>
+    <links>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="!auth.isAuthenticated()">
+          <app-search-box></app-search-box>
+        </li>
+
+        <li class="nav-item  waves-light" mdbWavesEffect>
+          <a class="nav-link white-text" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+        </li>
+        <li class="nav-item waves-light" routerLinkActive=" active" mdbWavesEffect *ngIf="auth.isAuthenticated()">
+          <a class="nav-link white-text" routerLink="/profile">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>My Profile</a>
+        </li>
+        <li class="nav-item waves-light" mdbWavesEffect>
+          <a class="nav-link white-text" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        </li>
+
+      </ul>
+    </links>
+  </mdb-navbar>
+</header>
+<!--Main Navigation-->
+<div id="bg"></div>
+<ng-progress [thick]="true" [color]="'#ffd747'" [ease]="'easeInSine'"></ng-progress>
+<!--Main Layout-->
+<main class="my-5 ">
+
+  <div class="container my-5">
+
+    <router-outlet></router-outlet>
+  </div>
+
+</main>
+<!--Main Layout-->
+
+<!-- Footer -->
+
+<footer class="page-footer text-center font-small mt-4 blue accent-4 ">
+  <hr class="my-4">
+  <!-- Social icons -->
+  <div class="pb-4">
+    <a href="https://www.facebook.com/RANA123.rana" target="_blank" rel="noopener">
+      <i class="fa fa-facebook mr-3"></i>
+    </a>
+
+    <a href="https://twitter.com/KumarAshu552" target="_blank" rel="noopener">
+      <i class="fa fa-twitter mr-3"></i>
+    </a>
+
+    <a href="https://plus.google.com/" target="_blank" rel="noopener">
+      <i class="fa fa-google-plus mr-3"></i>
+    </a>
+
+    <a href="https://github.com/RANA12345678" target="_blank" rel="noopener">
+      <i class="fa fa-github mr-3"></i>
+    </a>
+  </div>
+  <!-- Social icons -->
+  <!-- Social icons -->
+
+
+  <div class="footer-copyright py-3">Data Provided
+    <i class="fa fa-fire p-1 red-text"></i> By
+    <a href="https://developer.github.com/v3/" target="_blank" rel="noopener">
+      GitHub</a>
+  </div>
+
+
+</footer>
